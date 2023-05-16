@@ -1,0 +1,269 @@
+.header{
+    height: 768px;
+    background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+.navigation{
+    width: $width;
+    height: 48px;
+    @include flex(space-between);
+}
+.logo{
+    width: 48px;
+    height: 48px;
+    background-image: $background-image-1;
+    background-repeat: $background-repeat;
+}
+.menu{
+    width: 48px;
+    height: 48px;
+    background-image: $background-image-2;
+    background-repeat: $background-repeat;
+    cursor: pointer;
+}
+.sub-menu{
+  width: 135px;
+  list-style: none; 
+  display: none;
+  margin: 30px 0 0 -40px;
+  position: absolute;
+  z-index: 10;
+  li a{
+    color:#386a94;
+    font-size: 21px;
+    text-decoration: none;
+  }
+}
+.menu:hover .sub-menu{
+    display: block;
+}
+.header-text{
+    width: 548px;
+    height: 148px;
+    position: relative;
+    margin: 50px 0 0 100px;
+    color: #1F3F68;
+    h2{
+        font-size: 64px;
+        margin-bottom: 32px;
+    }
+    p{
+        font-size: 16px;
+        margin-bottom: 70px;
+    }
+    .image{
+        width: 688px;
+        height: 580px;
+        background-image: url("images/illustration.png");
+        margin-left: 470px;
+        margin-top: -350px;
+        position: absolute; 
+    }
+}
+.btn{
+    @include btn-style();
+}
+.row{
+    @include flex(center);
+    margin-top: 192px; 
+    .coll-1,
+    .coll-2{
+        width: 480px;
+    }
+    .coll-1{
+        h4{
+            width: 358px;
+            font-size: 36px;
+            color: #316099;
+            margin-bottom: 158px;
+            margin-top: 0
+        }
+        .content-1{
+            @include content-style();
+            .img-1{
+                background-image: url("images/make.png");
+                background-repeat: $background-repeat;
+                @include coll-style();
+                width: 182px;
+                height: 132px;
+                margin: 0 0 56px 26px;
+            }
+            .title-text{
+                @include title-text();
+            }
+            p{
+                @include paragrafe();
+            }
+            .btn-more{
+                @include btn-more();
+            } 
+        }
+    }
+    .coll-2{
+        .content-2{
+            @include content-style();
+            margin-bottom: 100px;
+            .img-2{
+                background-image: url("images/bring.png");
+                background-repeat: $background-repeat;
+                @include coll-style();
+                width: 236px;
+                height: 210px;
+                margin: -12px 22px 51px;
+            }
+            .title-text{
+                @include title-text();
+            }
+            p{
+                @include paragrafe();
+            }
+            .btn-more{
+                @include btn-more();
+            }
+        }
+        .content-3{
+            @include content-style();
+            .img-3{
+                background-image: url("images/build.png");
+                background-repeat: $background-repeat;
+                @include coll-style();
+                width: 178px;
+                height: 131px;
+                margin: 49px 52px 56px;
+            }
+            .title-text{
+                @include title-text();
+            }
+            p{
+                @include paragrafe();
+            }
+            .btn-more{
+                @include btn-more();
+            }
+        }
+    }   
+}
+.our-project{
+    width: 940px;
+    height: 1118px;
+    margin: 192px auto;
+    .text-project{
+        @include flex(space-between);
+        margin-bottom: 96px;
+        .title-project{
+            width: 227px;
+            height: 92px;
+            font-size: 36px;
+            color: #1F3F68;
+        } 
+        .lorem{
+            width: 540px;
+            height: 80px;
+            font-size: 16px;
+            color: #1F3F68;
+            opacity: 0.6;
+        } 
+    }
+    .img-project{
+        margin-bottom: 89px;
+    }
+    .images-project{
+        @include flex(space-between);
+    }
+}
+.big-footer{
+    height: 1549px;
+    position: relative;
+    background-color: #5A98D0;
+    border-radius: 200px 0 0 0;
+    .up-footer{
+        @include flex(center);
+        margin-left: -200px;
+        .title-footer{
+           @include title-footer();
+        }
+        .lorem-footer{
+            @include lorem-footer();
+        }
+    }
+    table{
+        width: 940px;
+        height: 256px;
+        margin: 0 auto;
+        text-align: center;
+        td{
+            border: 1px solid #ffffff;
+            width: 235px;
+            height: 128px;
+            color: #ffffff;
+            font-size: 20px;
+            border-left: none;
+            border-bottom: none;
+            &:last-child{
+                border-right: none;
+            }   
+        }
+        .up-table td{
+           border-top: none;
+        }
+        .cl-more{
+            background-color: rgba(31, 63, 104,0.2);
+        }
+    }
+}
+.small-footer{
+   @include small-footer();
+    .up-small{
+       @include flex(space-between);
+       width: 860px;
+       margin: 0 auto;
+       border-bottom: 1px solid #ffffff;
+       .left-small{
+        
+        .title-small{
+            @include title-small();
+        }
+        .lorem-small{
+            @include lorem-small();
+        }
+       }
+       .btn-talk{
+        @include btn-style();
+        margin: 165px 0 0 0;
+        text-align: center;
+        line-height: 50px;
+        align-self: flex-start;
+       }
+    }
+    .down-small{
+        @include flex(space-between);
+        width: 860px;
+        margin: 96px auto;
+        color: #ffffff;
+        .afr{
+           h4{
+             @include h4();
+           } 
+           p{
+            margin: 0 0 24px 0;
+            font-size: 16px;
+            span{
+                margin-right: 20px;
+            }
+           }
+        }
+        .about,
+        .follow{
+        h5{
+            font-size: 20px;
+            margin: 0 0 32px 0;
+        }
+        .p{
+            font-size: 16px;
+            margin: 0 0 16px 0;
+        }
+        }
+    }
+    .end{
+        @include end();
+    }
+}
